@@ -1,0 +1,17 @@
+CREATE TABLE USERS (
+    id TEXT PRIMARY KEY UNIQUE NOT NULL,
+    login TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    role TEXT NOT NULL
+);
+
+CREATE TABLE ponto_roteiro (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT NOT NULL,
+    nota DECIMAL(5, 2) NOT NULL,
+    data_de_criacao TIMESTAMP NULL,
+    cep VARCHAR(20) NULL,
+    fotos TEXT NULL,
+    state BOOLEAN NOT NULL
+);
